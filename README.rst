@@ -4,11 +4,14 @@
 *Usage:*
 --------
 >>>import requests
->>>from true_encoding import true_encoding ##
 
->>>response = requests.get('https://python.org')
->>>response.encoding = true_encoding(response) ##
->>>content = response.text
+>>>from true_encoding import Tcode ##
+
+>>>res = requests.get('https://python.org')
+
+>>>res.encoding = Tcode(res) ##
+
+>>>content = res.text
 
 
 
