@@ -1,11 +1,6 @@
 import re
 
 def Tcode(response):
-    '''
-    Solve the problem of 'ISO-8859-1'.
-    :param response:
-    :return:
-    '''
     if 'charset="' in response.text:
         pattern = re.compile('charset="(.*?)"',re.S)
         return re.findall(pattern,response.text)[0]
