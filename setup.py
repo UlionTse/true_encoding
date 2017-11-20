@@ -6,7 +6,7 @@ from setuptools import find_packages
 
 PACKAGE = "true_encoding"
 NAME = "true_encoding"
-DESCRIPTION = "true_encoding is the 100% accurate method of encoding html's response."
+DESCRIPTION = "true_encoding is the method of solving the problem of 'ISO-8859-1'."
 AUTHOR = "UlionTse"
 AUTHOR_EMAIL = "shinalone@outlook.com"
 URL = "https://github.com/shinalone/true_encoding"
@@ -27,7 +27,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     classifiers=[
-        "Development Status :: 1 - Alpha",
+        "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
