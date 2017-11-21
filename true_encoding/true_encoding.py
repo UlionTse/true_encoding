@@ -14,4 +14,4 @@ def Tcode(response):
     elif ('charset=ascii' or 'charset=ASCII') in response.text:
         return 'ASCII'
     else:
-        return 'utf-8'
+        return response.encoding
