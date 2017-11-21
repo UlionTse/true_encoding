@@ -1,7 +1,8 @@
 import re
 
 def Tcode(response):
-    if 'charset="' in response.text:
+    # space
+    if ' charset="' in response.text:
         pattern = re.compile('charset="(.*?)"',re.S)
         return re.findall(pattern,response.text)[0]
     elif ('charset=gb2312' or 'charset=GB2312') in response.text:
