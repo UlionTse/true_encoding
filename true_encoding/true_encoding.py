@@ -9,7 +9,7 @@ def Tcode(response):
         return 'utf-8'
     elif ('charset=gb2312' or 'charset=GB2312') in response.text:
         return 'GB2312'
-    elif (('charset=GBK' or 'charset=gbk') in response.text) or response.encoding=='ISO-8859-1':
+    elif ((('charset=GBK' or 'charset=gbk') in response.text) or (response.encoding=='ISO-8859-1')):
         return 'GBK'
     elif ('charset=cp936' or 'charset=CP936') in response.text:
         return 'cp936'
