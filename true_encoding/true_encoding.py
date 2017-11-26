@@ -1,19 +1,18 @@
 import re
 
-def Tcode(response):
-    if ' charset="' in response.text: # space
-        pattern = re.compile('charset="(.*?)"',re.S)
-        return re.findall(pattern,response.text)[0]
-    
-    elif ('charset=utf-8' or 'charset=UTF-8') in response.text:
-        return 'utf-8'
-    elif ('charset=gb2312' or 'charset=GB2312') in response.text:
-        return 'GB2312'
-    elif ((('charset=GBK' or 'charset=gbk') in response.text) or (response.encoding=='ISO-8859-1')):
-        return 'GBK'
-    elif ('charset=cp936' or 'charset=CP936') in response.text:
-        return 'cp936'
-    elif ('charset=ascii' or 'charset=ASCII') in response.text:
-        return 'ASCII'
-    else:
-        return response.encoding
+def encode_bug(res):
+    if res.encoding == 'ISO-8859-1':
+        if 'charset="' in res.text:
+            pattern = re.compile('charset="(.*?)"', re.S)
+            res.encoding = re.findall(pattern, res.text)[0]
+            return res.encoding
+        elif (('charset=utf-8' in res.text) or ('charset=UTF-8' in res.text)):
+            return 'utf-8'
+        elif (('charset=gb2312' in res.text) or ('charset=GB2312' in res.text)):
+            return 'gb2312'
+        elif (('charset=GBK' in res.text) or ('charset=gbk' in res.text)):
+            return 'GBK'
+        elif (('charset=cp936' in res.text) or ('charset=CP936' in res.text)):
+            return 'cp936'
+        else:
+            return 'utf-8'
