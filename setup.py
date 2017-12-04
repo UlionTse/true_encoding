@@ -35,7 +35,7 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6"
     ],
-    keywords=['encoding','true_encoding'],
+    keywords=['encoding','true_encoding','encode_bug','encode_debug'],
     install_requires=[],
     zip_safe=False,
 )

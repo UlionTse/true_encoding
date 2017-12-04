@@ -5,10 +5,10 @@
 --------
 >>>import requests
 
->>>from true_encoding.true_encoding import Tcode ##
+>>>from true_encoding.encode_bug import encode_bug
 
 >>>res = requests.get('https://python.org')
 
->>>res.encoding = Tcode(res) ##
+>>>res.encoding = encode_bug(res)
 
 >>>content = res.text

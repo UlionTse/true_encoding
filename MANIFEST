@@ -4,4 +4,4 @@ README.rst
 requirements.txt
 setup.py
 true_encoding/__init__.py
-true_encoding/true_encoding.py
+true_encoding/encode_bug.py
