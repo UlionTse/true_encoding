@@ -1,3 +1,6 @@
+# coding=utf-8
+# authoor:uliontse
+
 import re
 
 def encode_bug(res):
