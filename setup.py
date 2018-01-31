@@ -6,7 +6,7 @@ from setuptools import find_packages
 
 PACKAGE = "true_encoding"
 NAME = "true_encoding"
-DESCRIPTION = "true_encoding is the method of solving the problem of 'ISO-8859-1'."
+DESCRIPTION = "true_encoding is the method of solving the problem of 'ISO-8859-1' about parsing html."
 AUTHOR = "UlionTse"
 AUTHOR_EMAIL = "shinalone@outlook.com"
 URL = "https://github.com/shinalone/true_encoding"
@@ -35,7 +35,7 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6"
     ],
-    keywords=['encoding','true_encoding','encode_bug','encode_debug'],
+    keywords=['encoding','true_encoding','encode_bug','encode_debug','debug'],
     install_requires=[],
     zip_safe=False,
 )

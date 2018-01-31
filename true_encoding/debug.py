@@ -1,9 +1,10 @@
 # coding=utf-8
-# authoor:uliontse
+# authoor:UlionTse
 
 import re
 
-def encode_bug(res):
+
+def debug(res):
     if ((res.encoding == 'ISO-8859-1') or (res.encoding is None)):
         if (('charset=gb2312' in res.text) or ('charset=GB2312' in res.text)):
             return 'gb2312'

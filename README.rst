@@ -5,10 +5,11 @@
 --------
 >>>import requests
 
->>>from true_encoding.encode_bug import encode_bug
+>>>from true_encoding.debug import debug
 
->>>res = requests.get('https://python.org')
+>>>
 
->>>res.encoding = encode_bug(res)
+>>>res.encoding = debug(requests.get('http://www.fang.com'))
 
->>>content = res.text
+>>>print(res.text)
+
