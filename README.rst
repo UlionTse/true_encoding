@@ -3,11 +3,11 @@
 
 *Usage:*
 --------
->>>from true_encoding.debug import debug
+>>> from true_encoding.debug import debug
 
->>>r = requests.get('http://www.fang.com')
+>>> r = requests.get('http://www.fang.com')
 
->>>r.encoding = debug(r)
+>>> r.encoding = debug(r)
 
->>>print(r.text)
+>>> print(r.text)
 
